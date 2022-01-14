@@ -1,0 +1,14 @@
+.itemListContainer{
+    background-color: bisque;
+    padding-top: 1%;
+    box-shadow: 4px 2px 7px #937672;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+p{
+    font-size: 22px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #937672;
+} 
