@@ -1,11 +1,15 @@
 
 import React from "react";
 import "./ItemListContainer.css"
+import ListaDeProductos from "../Productos/ListaDeProductos";
 
-const ItemListContainer = ({greeting}) => {
+const ItemListContainer = () => {
     return(
-        <div className="itemListContainer">
-            <p>{greeting}</p>
+        <div className="itemListContainer" style={{display:'in-line', width:'100%', alignContent:'center', height:'100vh'}}>
+            <div>
+                <ListaDeProductos/>
+            </div>
+            
         </div>
     );
 };
