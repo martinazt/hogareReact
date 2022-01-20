@@ -1,27 +1,18 @@
 import react, {useState} from "react";
+import * as ReactBootStrap from "react-bootstrap";
 
-export default function MasMenos({tope}){
+export default function MasMenos({tope,onAdd}){
     
     const [cantidad, setCantidad] = useState(1);
 
     function sumar(){
-        let aux = cantidad;
-
-        if (aux < tope) {
-            aux = aux +1;
-            setCantidad(aux);
-        }
-        
+        if (cantidad < (tope)) {  setCantidad(cantidad + 1)}
+       
         
     }
 
     function restar(){
-        let aux = cantidad;
-
-        if (aux > 1) {
-            aux = aux -1;
-        }
-      setCantidad(aux);
+        if (cantidad > 1) {  setCantidad(cantidad-1)}
     }
 
 
@@ -32,6 +23,10 @@ export default function MasMenos({tope}){
            <span onClick={()=>restar()}>-</span>
            {cantidad}
            <span onClick={()=>sumar()}>+</span>
+           <div>
+                <ReactBootStrap.Button variant="primary"  onClick={()=>onAdd(cantidad)}>Agregar al carrito</ReactBootStrap.Button>  
+           </div>
+           
            <br /> 
            <br />
         </>

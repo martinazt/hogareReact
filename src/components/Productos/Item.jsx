@@ -5,10 +5,10 @@ import torta1 from "../../img/torta1.jpg"
 
 
 
-export default function Producto({item}){
+export default function Item({item}){
     
-    function onAdd(){
-        alert(item.nombre + '' + item.stock);
+    function onAdd(onAdd){
+        alert(' se sumaron '+ onAdd + ' del producto : '+ item.nombre  );
     }
 
     return(
@@ -24,8 +24,8 @@ export default function Producto({item}){
                 <ReactBootStrap.Card.Text>
                 Stock disponible: {item.stock}
                 </ReactBootStrap.Card.Text>
-                <ReactBootStrap.Button variant="primary"  onClick={()=>onAdd()}>Agregar al carrito</ReactBootStrap.Button>
-                <ItemCount tope={item.stock} />
+                <ItemCount tope={item.stock} onAdd={onAdd}/>
+                <ReactBootStrap.Button variant="primary"  >Ver detalles</ReactBootStrap.Button>
             </ReactBootStrap.Card.Body>
             </ReactBootStrap.Card>
             

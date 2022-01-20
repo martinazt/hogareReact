@@ -12,3 +12,12 @@ p{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: #937672;
 } 
+.cargandoPantalla{
+  background-color: bisque;
+    padding-top: 1%;
+    box-shadow: 4px 2px 7px #937672;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
